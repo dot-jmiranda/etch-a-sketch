@@ -29,8 +29,16 @@ let addSquares = () => {
   }
 
   let squares = document.querySelectorAll(".square");
-  squares.forEach(square =>
-    square.addEventListener("mouseenter", function() {
+  squares.forEach(
+    square =>
+      square.addEventListener("mouseenter", function() {
+        square.style.backgroundColor = `rgb(${Math.floor(
+          Math.random() * (255 - 0) + 0
+        )}, ${Math.floor(Math.random() * (255 - 0) + 0)}, ${Math.floor(
+          Math.random() * (255 - 0) + 0
+        )})`;
+      }),
+    square.addEventListener("touchenter", function() {
       square.style.backgroundColor = `rgb(${Math.floor(
         Math.random() * (255 - 0) + 0
       )}, ${Math.floor(Math.random() * (255 - 0) + 0)}, ${Math.floor(
